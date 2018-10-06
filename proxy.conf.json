@@ -1,0 +1,8 @@
+{
+  "/api" : {
+    "target": "http://drague.karaoke:123",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

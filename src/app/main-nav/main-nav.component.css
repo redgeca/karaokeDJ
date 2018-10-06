@@ -1,0 +1,20 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 50%;
+  white-space: nowrap;
+  display: flex;
+}
+
+.mat-menu {
+  background-color: darkslategray;
+}
+
+.mat-menu-item {
+  background-color: darkslategray;
+  color: lightgray;
+}
+
+

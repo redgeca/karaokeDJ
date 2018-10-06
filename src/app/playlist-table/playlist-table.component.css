@@ -1,0 +1,23 @@
+.mat-card {
+  width: 100%;
+  font-size: large;
+  color: lightgray;
+  background-color: darkslategray;
+  border-color: white;
+  cursor: pointer;
+}
+
+.mat-card-subtitle {
+  font-size: large;
+  color: floralwhite;
+}
+
+.mat-table {
+  background-color:darkslategray;
+  border-color: white;
+}
+
+.mat-button {
+  margin: 5px;
+  margin-right: -20px;
+}

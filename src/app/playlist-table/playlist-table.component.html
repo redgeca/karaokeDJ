@@ -1,0 +1,33 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let item; let i = index" >
+        <mat-card >
+          {{item.request.song.title}} de {{item.request.song.artist.name}}
+          <mat-card-subtitle>
+              ({{ item.request.requestTime | date:'hh:mm:ss' }})  -  {{ item.request.singerName }}
+          </mat-card-subtitle>
+          <!-- <mat-card-content>
+            {{ song.notes }}
+          </mat-card-content> -->
+        </mat-card>
+          <button *ngIf="i == 0" mat-button mat-icon-button color="warn" (click)="onClick(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+      <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+    </ng-container>
+    <mat-row *matRowDef="let row; columns: displayedColumns; let i = index"></mat-row>
+    <mat-footer-row *matFooterRowDef="displayedColumns" droppable [dropScope]="['Request','Playlist']" (onDrop)="onItemDrop($event, i)">
+      <mat-card >
+        <mat-card-subtitle>
+        </mat-card-subtitle>
+        <mat class="card"></mat>
+        <!-- <mat-card-content>
+          {{ song.notes }}
+        </mat-card-content> -->
+      </mat-card>
+    </mat-footer-row>
+  </mat-table>
+</div>
